@@ -1,24 +1,16 @@
-d>
+<html>
+<head>
         <title>My first blog</title>
     </head>
     <body>
-        <div>
-            <h1><a href="">what a blog!</a></h1>
-        </div>
+        {% for post in posts %}
+    <div>
+        <p>published: {{ post.published_date }}</p>
+        <h1><a href="">{{ post.title }}</a></h1>
+        <p>{{ post.text|linebreaksbr }}</p>
+    </div>
+{% endfor %}
 
-        <div>
-            <p>small</p>
-            <h2><a href="">link1</a></h2>
-            <p>nonsense</p>
-        </div>
-
-        <div>
-            <p>small2date?</p>
-            <h2><a href="">link2</a></h2>
-            <p>blabla</p>
-        </div>
-    </body>
+</body>
 </html>
-A
-A
 
